@@ -52,16 +52,16 @@ void freeTree(Node* root)
 }
 int main()
 {
-    int n;
+    char s[100];
     int a;
     Node* root=NULL;
-    scanf("%d",&n);
-    for (int i=0;i<n;i++)
+    while(1)
     {
+        scanf("%s",s);
+        if (s[0]=='#') break;
         scanf("%d",&a);
         insert(&root,a);
     }
-    //inOrder(root);
     preOrder(root);
     printf("\n");
     freeTree(root);
